@@ -1,0 +1,15 @@
+{
+  "apps" : [{
+    "name"        : "camera",
+    "script"      : "src/camera.js",
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production" : {
+       "NODE_ENV": "production"
+    }
+  },{
+    "name"       : "cron",
+    "script"     : "src/cron.js"
+  }]
+}
