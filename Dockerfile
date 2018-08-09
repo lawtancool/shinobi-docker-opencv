@@ -1,5 +1,5 @@
 #FROM keymetrics/pm2:latest-alpine
-FROM nvidia/cuda:9.1-cudnn7-runtime-ubuntu16.04
+FROM nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 #FROM valian/docker-python-opencv-ffmpeg:cuda-py3
 #ENV NCCL_VERSION 2.2.12
 VOLUME ["src/"]
@@ -62,6 +62,8 @@ WORKDIR src
 # Show current folder structure in logs
 #RUN ls -al -R
 ENV HOME "src/"
+WORKDIR /src/plugins/python-yolo
+RUN sh INSTALL.sh
 RUN echo $HOME
 RUN pwd
-CMD [ "pm2-runtime", "start", "pm2.json" ]
+CMD [ "pm2-runtime", "start", "shinobi-python-yolo.js" ]
