@@ -62,8 +62,8 @@ WORKDIR src
 # Show current folder structure in logs
 #RUN ls -al -R
 ENV HOME "src/"
-WORKDIR /src/plugins/python-yolo
+WORKDIR /src/plugins/yolo
 RUN sh INSTALL.sh
 RUN echo $HOME
 RUN pwd
-CMD [ "pm2-runtime", "start", "shinobi-python-yolo.js" ]
+CMD [ "pm2-runtime", "start", "shinobi-yolo.js" ]
