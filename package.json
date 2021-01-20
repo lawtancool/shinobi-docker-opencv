@@ -19,7 +19,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "circular-json": "0.3.1",
-    "connection-tester": "^0.1.1",
+    "connection-tester": ">=0.2.1",
     "chokidar": "^2.0.3",
     "mp4frag": "^0.0.15",
     "ejs": "^2.5.5",
